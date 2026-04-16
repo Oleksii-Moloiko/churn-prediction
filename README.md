@@ -66,6 +66,14 @@ Why this model:
 - It reduced false negatives from `160` to `76`.
 - It matched the business goal better than the higher-accuracy alternatives.
 
+## Results summary
+
+- Final model: Logistic Regression with balanced class weights
+- Main business metric: recall for churn customers
+- Final churn recall on the test set: `0.80`
+- False negatives reduced from `160` to `76`
+- API available through FastAPI with interactive Swagger docs
+
 ## Important features
 
 Features associated with higher churn:
@@ -194,6 +202,14 @@ Run the container:
 ```bash
 docker run -p 8000:8000 churn-api
 ```
+
+## Future improvements
+
+- Add a Streamlit frontend for interactive customer scoring
+- Tune the classification threshold for different business scenarios
+- Add automated tests for the prediction pipeline and API
+- Deploy the API to a cloud service such as Render or Railway
+- Track experiments and metrics with an ML experiment tool
 
 ## Interview pitch
 
