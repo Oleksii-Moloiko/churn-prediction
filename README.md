@@ -139,6 +139,7 @@ python -m uvicorn app.app:app --reload
 Open:
 
 - `http://127.0.0.1:8000/`
+- `http://127.0.0.1:8000/health`
 - `http://127.0.0.1:8000/docs`
 
 ### Example API request
@@ -169,8 +170,17 @@ curl -X POST "http://127.0.0.1:8000/predict" \
 }'
 ```
 
-## Interview pitch
+Example response:
 
-You can describe the project like this:
+```json
+{
+  "prediction": "Yes",
+  "churn_probability": 0.8097,
+  "threshold": 0.5,
+  "risk_level": "high"
+}
+```
+
+## Interview pitch
 
 > I built an end-to-end churn prediction system. I started with EDA to understand the drivers of churn, cleaned and transformed the data with a reusable preprocessing pipeline, compared multiple classification models, and optimized for recall because missing a real churn customer is costly for the business. I then saved the model and exposed it through a FastAPI endpoint for real-time prediction.
