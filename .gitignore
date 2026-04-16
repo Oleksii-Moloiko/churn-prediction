@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Local model artifacts
+models/*.pkl
+
+# Optional local data copies
+data/*.zip
