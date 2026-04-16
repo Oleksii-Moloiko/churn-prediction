@@ -181,6 +181,20 @@ Example response:
 }
 ```
 
+## Run with Docker
+
+Build the image:
+
+```bash
+docker build -t churn-api .
+```
+
+Run the container:
+
+```bash
+docker run -p 8000:8000 churn-api
+```
+
 ## Interview pitch
 
 > I built an end-to-end churn prediction system. I started with EDA to understand the drivers of churn, cleaned and transformed the data with a reusable preprocessing pipeline, compared multiple classification models, and optimized for recall because missing a real churn customer is costly for the business. I then saved the model and exposed it through a FastAPI endpoint for real-time prediction.
